@@ -1,0 +1,47 @@
+clips:
+  doors_open:
+
+    layers:
+      - outside
+      - left_door from door
+      - right_door from door
+      - left_light from light
+      - right_light from light
+      - man
+      - man_shadow
+
+    layer_params:
+      right_door:
+        position: 400 0
+        flipped: x
+      left_light:
+        opacity: 0
+      right_light:
+        position: 400 0
+        flipped: x
+        opacity: 0
+      man:
+        position: 0 -50
+      man_shadow:
+        position: 0 -50
+        opacity: 0
+
+    macros:
+      move_left: move_by -600 0 over 15s using fade
+      move_right: move_by 600 0 over 15s using fade
+
+    timeline:
+      2:
+        - left_door move_left
+        - right_door move_right
+        - left_light move_left
+        - right_light move_right
+      4:
+        - left_light fade_in over 3s
+        - right_light fade_in over 3s
+      5:
+        - man_shadow fade_in over 2s
+
+
+
+

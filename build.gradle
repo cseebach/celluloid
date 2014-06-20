@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+group = 'com.sinfoniasolutions'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = "1.7"
+
+repositories{
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.yaml:snakeyaml:1.13'
+
+    compile 'com.badlogicgames.gdx:gdx:1.1.0'
+    compile "com.badlogicgames.gdx:gdx-freetype:1.1.0"
+
+    compile 'com.badlogicgames.gdx:gdx-backend-lwjgl:1.1.0'
+    testCompile 'junit:junit:4.11'
+
+    runtime "com.badlogicgames.gdx:gdx-freetype-platform:1.1.0:natives-desktop"
+    runtime 'com.badlogicgames.gdx:gdx-platform:1.1.0:natives-desktop'
+    runtime 'com.googlecode.soundlibs:jorbis:0.0.17-2'
+}
